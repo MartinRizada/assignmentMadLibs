@@ -1,7 +1,7 @@
 
 import { Link } from 'expo-router';
 import React, { useState } from 'react';
-import { Pressable, View, Text, TextInput, Button, SafeAreaView } from 'react-native';
+import {Alert,Pressable, View, Text, TextInput, Button, SafeAreaView } from 'react-native';
 import Styles from '../styles/page-styles';
 
 export default function firstPage() { 
@@ -11,11 +11,9 @@ export default function firstPage() {
 
   
     const handleNavigate = () => {
-        if (!name || !noun || !event) {
+        
             Alert.alert("All fields are required", "Please fill out all the fields to create your Hall Pass.");
-            return;
-        }
-        // The navigation logic will be handled by the Link component since all fields are filled.
+        
     };
     const handleClear = () => {
         setName('');
@@ -59,7 +57,9 @@ export default function firstPage() {
                         <Text style={Styles.text1 }>Make My Hall Pass</Text>
                 </Link>
                 </Pressable>
-                <View style={Styles.button2}><Button title="Clear" color="#FF0000" onPress={handleClear} /></View>
+                <View ><Pressable style={Styles.button2} title="Clear" onPress={handleClear} >
+                    <Text style={Styles.clearText}>Clear</Text>
+                </Pressable></View>
             </View>
         </SafeAreaView>
     );

@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     },
     button1: {
         marginTop: 25,
+        marginBottom:20,
         width: 160,
         backgroundColor: 'brown',
         borderRadius: 20,
@@ -37,8 +38,16 @@ const styles = StyleSheet.create({
         color: 'white',
     },
     button2: {
-        marginTop: 25,
+        borderRadius: 20,
         width: 100,
+        width: 160,
+        backgroundColor: 'gray',
+        borderRadius: 20,
+        padding: 20,
+    },
+    clearText: {
+        color: 'white',
+        textAlign: 'center',
     },
     subContainer: {
         flex: 1,
@@ -65,9 +74,11 @@ const styles = StyleSheet.create({
     },
 
     titleText: {
-        fontSize: 40,
+        marginTop: 50,
+        fontSize: 50,
         fontWeight: 'bold',
         marginBottom: 4,
+        
     },
     dateText: {
         fontSize: 24,
