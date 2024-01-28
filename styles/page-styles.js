@@ -23,8 +23,9 @@ const styles = StyleSheet.create({
         width: 300,
         height: 40,
         margin: 12,
-        borderWidth: 1,
+        borderWidth: 2,
         padding: 10,
+        borderRadius: 15,
     },
     button1: {
         marginTop: 25,
@@ -55,21 +56,21 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     hallPassContainer: {
-        width: 150, // Adjust the width as needed
+        width: 150, 
         alignItems: 'center',
         justifyContent: 'center',
-        // backgroundColor: '#f0f0f0', // Different background color for visual separation
+
     },
     verticalText: {
         transform: [{ rotate: '-90deg' }],
         fontSize: 35,
         fontWeight: 'bold',
-        color: 'black',
+        color: 'gold',
     },
     contentContainer: {
         flex: 1, // Take up the remaining space
         padding: 10,
-        marginTop: -300,
+        marginBottom: 100,
         justifyContent: 'center', // Center content vertically
     },
 
@@ -78,7 +79,7 @@ const styles = StyleSheet.create({
         fontSize: 50,
         fontWeight: 'bold',
         marginBottom: 4,
-        
+        color: "brown",
     },
     dateText: {
         fontSize: 24,
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
     paragraph: {
         fontSize: 30,
         fontWeight: 'normal',
-        lineHeight: 40,
+        lineHeight: 50,
         marginTop: 30,
     },
     userText: {
@@ -100,12 +101,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         height: 100,
-        marginTop: 20,  // Make sure the signature box spans the full width
+        marginTop: 70, 
     },
     signatureLabel: {
         position: 'absolute',
-        top: 5, // Adjust as needed to position the label above the box
-        left: 10, // Adjust as needed to position the label inside the box
+        top: 5, 
+        left: 10,
         backgroundColor: 'white',
         fontSize: 16,
     },

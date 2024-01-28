@@ -4,17 +4,19 @@ import React, { useState } from 'react';
 import {Alert,Pressable, View, Text, TextInput, Button, SafeAreaView } from 'react-native';
 import Styles from '../styles/page-styles';
 
+
+const strings = {
+    instructionsString: "Let's make you a unique Hall Pass! \n\n To begin, please fill in the blanks with a Name, a Noun, and an Event.",
+    nameString: "Name (e.g., Darwin)",
+    nounString: "Noun (e.g., Science)",
+    eventString: "An Event e.g., (Chess Club)"
+};
+
 export default function firstPage() { 
     const [name, setName] = useState('');
     const [noun, setNoun] = useState('');
     const [event, setEvent] = useState('');
 
-  
-    const handleNavigate = () => {
-        
-            Alert.alert("All fields are required", "Please fill out all the fields to create your Hall Pass.");
-        
-    };
     const handleClear = () => {
         setName('');
         setNoun('');
@@ -25,28 +27,34 @@ export default function firstPage() {
         <SafeAreaView style={Styles.main}>
         
             <View style={Styles.title}>
-                <Text style={Styles.instructions}>How To Play Mad Libs Hall Pass</Text>
+                <Text style={Styles.instructions}>{strings.instructionsString}</Text>
             </View>
             <View style={Styles.mainContainer}>
                 <TextInput
                     style={Styles.input}
                     onChangeText={setName}
                     value={name}
-                    placeholder="Name"
+                    placeholder={strings.nameString}
+                    placeholderTextColor="#c7c7cd" 
+                    selectionColor ="brown"
                 />
                 <TextInput
                     style={Styles.input}
                     onChangeText={setNoun}
                     value={noun}
-                    placeholder="Noun"
+                    placeholder={strings.nounString}
+                    placeholderTextColor="#c7c7cd" 
+                    selectionColor="brown"
                 />
                 <TextInput
                     style={Styles.input}
                     onChangeText={setEvent}
                     value={event}
-                    placeholder="An Event"
+                    placeholder={strings.eventString}
+                    placeholderTextColor="#c7c7cd" 
+                    selectionColor="brown"
                 />
-                <Pressable onPress={handleNavigate}>
+                <Pressable>
                 <Link
                     style={Styles.button1}
                     href={{
@@ -64,8 +72,3 @@ export default function firstPage() {
         </SafeAreaView>
     );
 }
-
-
-
-
-
